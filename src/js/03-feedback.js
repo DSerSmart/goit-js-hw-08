@@ -7,7 +7,7 @@ form.addEventListener('submit', onSubmitForm);
 const formData = {};
 
 function onFormData(e) {
-  formData = JSON.parse(localStorage.getItem(INPUT_KEY)) || {};
+  formData = JSON.parse(localStorage.getItem('feedback-form-state')) || {};
   formData[e.target.name] = e.target.value;
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 }
